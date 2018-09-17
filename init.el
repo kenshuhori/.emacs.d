@@ -51,6 +51,40 @@
   :bind (
     ("M-x" . smex)))
 
+(use-package yasnippet
+  :config
+  (yas-global-mode t))
+
+(use-package company
+  :init
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1)
+  :config
+  (global-company-mode t))
+
+(use-package dired-subtree
+  :init
+  (setq dired-subtree-use-background nil))
+
+(use-package golden-ratio
+  :init
+  (setq golden-ratio-auto-scale t)
+  :config
+  (golden-ratio-mode t))
+
+(use-package iflipb
+  :init
+  (setq iflipb-ignore-buffers nil)
+  :bind (
+    ("M-h" . iflipb-next-buffer)
+    ("M-H" . iflipb-previous-buffer)))
+
+(use-package smooth-scrolling        
+  :init
+  (setq smooth-scroll-margin 1)      
+  :config
+  (smooth-scrolling-mode t))
+
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
