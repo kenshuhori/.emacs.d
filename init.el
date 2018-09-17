@@ -4,6 +4,11 @@
 (cask-initialize)
 
 (require 'use-package)
+(use-package dired
+  :init
+  (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+  :bind (:map dired-mode-map
+    ("i" . dired-subtree-toggle)))
 
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
