@@ -1,4 +1,4 @@
-n(package-initialize)
+(package-initialize)
 
 (require 'cask)
 (cask-initialize)
@@ -13,6 +13,15 @@ n(package-initialize)
 (use-package expand-region
   :bind (
     ("C-c e" . er/expand-region)))
+
+;for activate another program on emacs
+(use-package exec-path-from-shell
+  :config
+  (exec-path-from-shell-initialize))
+
+(use-package flycheck
+  :config
+  (global-flycheck-mode))
 
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
