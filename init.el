@@ -3,6 +3,8 @@
 (require 'cask)
 (cask-initialize)
 
+(require 'use-package)
+
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
