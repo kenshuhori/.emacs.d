@@ -30,6 +30,8 @@
 (use-package projectile
   :init
   (setq projectile-known-projects-file (locate-user-emacs-file "tmp/projectile-bookmarks.eld"))
+  :bind
+  ("C-x C-f" . projectile-find-file)
   :config
   (projectile-mode))
 
