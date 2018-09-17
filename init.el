@@ -1,3 +1,8 @@
+(package-initialize)
+
+(require 'cask)
+(cask-initialize)
+
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
