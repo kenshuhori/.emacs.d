@@ -1,4 +1,4 @@
-(package-initialize)
+n(package-initialize)
 
 (require 'cask)
 (cask-initialize)
@@ -8,7 +8,11 @@
   :init
   (add-hook 'dired-mode-hook 'dired-hide-details-mode)
   :bind (:map dired-mode-map
-    ("i" . dired-subtree-toggle)))
+              ("i" . dired-subtree-toggle)))
+
+(use-package expand-region
+  :bind (
+    ("C-c e" . er/expand-region)))
 
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
