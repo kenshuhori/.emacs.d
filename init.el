@@ -39,6 +39,10 @@
   :config
   (save-place-mode 1))
 
+(use-package smartparens-config
+  :config
+  (smartparens-global-mode t))
+
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
