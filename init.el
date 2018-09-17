@@ -43,6 +43,14 @@
   :config
   (smartparens-global-mode t))
 
+(use-package smex
+  :init
+  (setq smex-save-file (locate-user-emacs-file "tmp/smex-items"))
+  :config
+  (smex-initialize)
+  :bind (
+    ("M-x" . smex)))
+
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
