@@ -1,7 +1,11 @@
 # .emacs.d
 
-my favorite settings for emacs.
+My favorite settings for emacs.
 
-# how to use
+# HOW TO USE
 
 You need to install Cask.
+$ brew install cask
+$ cd ~/.emacs.d
+$ cask init
+$ cask install
